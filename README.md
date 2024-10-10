@@ -1,7 +1,13 @@
-# Project Name
+# OpenAI Realtime Chat in CLI
 
 ## Introduction
 This project is designed to manage audio streaming and WebSocket communication. It includes features such as asynchronous audio input/output, noise reduction, automatic gain control, and more.
+
+## Features
+- Asynchronous audio input/output
+- Noise reduction
+- Automatic gain control
+- WebSocket communication
 
 ## Installation
 1. Clone the repository:
@@ -22,12 +28,6 @@ To start the application, run:
 ```bash
 python main.py
 ```
-
-## Features
-- Asynchronous audio input/output
-- Noise reduction
-- Automatic gain control
-- WebSocket communication
 
 ## Configuration
 Configuration files are located in `audio_config.json` and `audio_config.yaml`. Adjust these files to change the audio and streaming settings.

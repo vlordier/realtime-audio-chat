@@ -20,7 +20,7 @@ This project is designed to manage audio streaming and WebSocket communication. 
 ## Usage
 To start the application, run:
 ```bash
-python src/main.py
+python main.py
 ```
 
 ## Features

@@ -1,0 +1,8 @@
+base_url: wss://api.openai.com/v1/realtime
+device_hash: 7a6029b17bc8bfdf9d909dd0f1c4a00adfde5632aebc6d74d901f98da0c69382
+input_device: Anker PowerConf C200
+input_device_index: 1
+machine_id: '190070690681122'
+model_type: gpt-4o-realtime-preview-2024-10-01
+output_device: MacBook Pro Speakers
+output_device_index: 3

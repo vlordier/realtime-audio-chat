@@ -1,0 +1,58 @@
+[tool.interrogate]
+ignore-init-method = false
+ignore-init-module = false
+ignore-magic = false
+ignore-semiprivate = false
+ignore-private = false
+ignore-property-decorators = false
+ignore-module = false
+ignore-nested-functions = false
+ignore-nested-classes = false
+ignore-setters = false
+ignore-overloaded-functions = false
+fail-under = 80
+# example values
+exclude = ["setup.py", "docs", "build"]
+[tool.pytest.ini_options]
+addopts = "--cov=src --cov-report=term-missing"
+testpaths = ["tests"]
+# example regex
+ignore-regex = ["^get$", "^mock_.*", ".*BaseClass.*"]
+ext = []
+# possible values: sphinx (default), google
+style = "sphinx"
+# possible values: 0 (minimal output), 1 (-v), 2 (-vv)
+verbose = 2
+quiet = false
+whitelist-regex = []
+color = true
+omit-covered-files = false
+# output file logation
+generate-badge = "."
+badge-format = "svg"
+
+[tool.mypy]
+python_version = "3.12"  # Specify the Python version
+check_untyped_defs = true  # Check functions even if they lack type annotations
+ignore_missing_imports = true  # Ignore errors if the module cannot be found
+strict = true  # Enable all strict settings
+show_error_codes = true  # Display error codes in output
+warn_unused_configs = true  # Warn if there are unused configurations
+warn_unused_ignores = true  # Warn about unused `# type: ignore` comments
+
+# Additional flags for stricter type checks
+warn_return_any = true  # Warn about functions returning `Any`
+warn_unreachable = true  # Warn about unreachable code
+
+# Exclude specific directories from type checking (e.g., virtual environments, tests, etc.)
+exclude = [
+  "venv",
+  ".venv",
+  "tests",
+]
+
+["mypy-*.tests.*"]
+ignore_errors = true  # Ignore errors in the tests directory
+
+["mypy-numpy.*"]
+ignore_missing_imports = true  # Ignore missing imports for external libraries like numpy
